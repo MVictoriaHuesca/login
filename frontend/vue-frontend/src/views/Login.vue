@@ -3,7 +3,7 @@
     <h1>Bienvenido</h1>
     <p>Inicia sesión para continuar</p>
     
-    <a href="http://localhost:8000/auth/login/google" class="btn-google">
+    <a href="https://app-eta-eight-34.vercel.app/auth/login/google" class="btn-google">
       Ingresar con Google
     </a>
   </div>
