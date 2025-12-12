@@ -3,7 +3,7 @@
     <h1>Bienvenido</h1>
     <p>Inicia sesión para continuar</p>
     
-    <a href="https://app-git-main-victorias-projects-f2384d75.vercel.app/auth/login/google" class="btn-google">
+    <a href="https://app-oqpe2fkvj-victorias-projects-f2384d75.vercel.app/auth/login/google" class="btn-google">
       Ingresar con Google
     </a>
   </div>
