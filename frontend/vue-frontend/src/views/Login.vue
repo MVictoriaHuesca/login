@@ -1,9 +1,14 @@
+<script setup>
+// Obtener la URL de la variable de entorno
+const apiUrl = import.meta.env.VITE_API_URL;
+</script>
+
 <template>
   <div class="center-screen">
     <h1>Bienvenido</h1>
     <p>Inicia sesión para continuar</p>
     
-    <a href="https://app-git-main-victorias-projects-f2384d75.vercel.app/auth/login/google" class="btn-google">
+    <a :href="`${apiUrl}/auth/login/google`" class="btn-google">
       Ingresar con Google
     </a>
   </div>
