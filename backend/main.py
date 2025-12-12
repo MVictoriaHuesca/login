@@ -26,6 +26,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.add_middleware(
+    SessionMiddleware, 
+    secret_key=settings.SECRET_KEY, 
+    https_only=True,  # ¡Vital para Render! Fuerza que la cookie sea segura
+    same_site="lax"   # Ayuda a que la cookie sobreviva a la redirección
+)
+
 # Incluir Routers
 app.include_router(auth.router, prefix="/auth") # Las rutas serán /auth/register y /auth/token
 app.include_router(users.router)
