@@ -13,7 +13,6 @@ origins = [
     "http://localhost:5173",
     "http://localhost:5174",
     settings.FRONTEND_URL,
-    "https://app-fo.vercel.app"
     # Añade aquí tu dominio de producción (ej: https://mi-app.com)
 ]
 
