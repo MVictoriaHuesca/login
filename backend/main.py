@@ -16,7 +16,14 @@ origins = [
     # Añade aquí tu dominio de producción (ej: https://mi-app.com)
 ]
 
-app.add_middleware(SessionMiddleware, secret_key=settings.SECRET_KEY)
+
+app.add_middleware(
+    SessionMiddleware, 
+    secret_key=settings.SECRET_KEY,
+    max_age=3600,  # 1 hora
+    same_site="lax",  # Cambiado de "none" a "lax"
+    https_only=True if settings.FRONTEND_URL.startswith("https") else False
+)
 
 app.add_middleware(
     CORSMiddleware,
@@ -26,12 +33,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.add_middleware(
-    SessionMiddleware, 
-    secret_key=settings.SECRET_KEY, 
-    https_only=True,
-    same_site="none"   
-)
 
 # Incluir Routers
 app.include_router(auth.router, prefix="/auth") # Las rutas serán /auth/register y /auth/token

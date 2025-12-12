@@ -8,7 +8,7 @@ const apiUrl = import.meta.env.VITE_API_URL;
     <h1>Bienvenido</h1>
     <p>Inicia sesión para continuar</p>
     
-    <a :href="`${apiUrl}/auth/google/callback`" class="btn-google">
+    <a :href="`${apiUrl}/auth/login/google`" class="btn-google">
       Ingresar con Google
     </a>
   </div>
