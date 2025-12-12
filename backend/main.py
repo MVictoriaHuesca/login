@@ -29,8 +29,8 @@ app.add_middleware(
 app.add_middleware(
     SessionMiddleware, 
     secret_key=settings.SECRET_KEY, 
-    https_only=True,  # ¡Vital para Render! Fuerza que la cookie sea segura
-    same_site="lax"   # Ayuda a que la cookie sobreviva a la redirección
+    https_only=True,
+    same_site="none"   
 )
 
 # Incluir Routers
